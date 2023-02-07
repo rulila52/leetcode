@@ -4,27 +4,24 @@ export function totalFruit(fruits: number[]): number {
         maxCount = 0,
         firstCount = 0,
         secondCount = 0,
-        countAfterBreak = 0;
+        afterBreakCount = 0;
     for (let i = 0; i < fruits.length; i++) {
         if (fruits[i] === first) {
             firstCount++;
-            countAfterBreak = 1;
+            afterBreakCount = 1;
             [firstCount, secondCount] = [secondCount, firstCount];
             [first, second] = [second, first];
         } else if (fruits[i] === second) {
             secondCount++;
-            countAfterBreak++;
+            afterBreakCount++;
         } else {
-            if (second == null) {
-                firstCount = 0;
-            } else {
-                firstCount = countAfterBreak;
-            }
+            firstCount = afterBreakCount;
             secondCount = 1;
-            countAfterBreak = 1;
+            afterBreakCount = 1;
             first = second;
             second = fruits[i];
         }
+
         if (firstCount + secondCount > maxCount) {
             maxCount = firstCount + secondCount;
         }
