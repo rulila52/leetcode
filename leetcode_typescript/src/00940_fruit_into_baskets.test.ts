@@ -1,6 +1,6 @@
 import { totalFruit } from "./00940_fruit_into_baskets";
 
-it(`904. Fruit Into Baskets
+it(`✅✅ 904. Fruit Into Baskets
 Given the integer array fruits, return the maximum number of fruits you can pick. 
 fruits[i] is the type of fruit the ith tree produces.
 Some strict rules that you must follow:
