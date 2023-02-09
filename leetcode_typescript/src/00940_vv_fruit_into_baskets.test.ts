@@ -1,6 +1,7 @@
 import { totalFruit } from "./00940_vv_fruit_into_baskets";
 
 // ✅✅ 904. Fruit Into Baskets
+// 📅 07.02.23 (Daily Challenge)
 // Given the integer array fruits, return the maximum number of fruits you can pick.
 // fruits[i] is the type of fruit the ith tree produces.
 // Some strict rules that you must follow:
