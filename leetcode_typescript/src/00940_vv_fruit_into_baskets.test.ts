@@ -1,4 +1,4 @@
-import { totalFruit } from "./00940_fruit_into_baskets";
+import { totalFruit } from "./00940_vv_fruit_into_baskets";
 
 // ✅✅ 904. Fruit Into Baskets
 // Given the integer array fruits, return the maximum number of fruits you can pick.

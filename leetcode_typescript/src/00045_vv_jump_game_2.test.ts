@@ -6,7 +6,7 @@
 // Return the minimum number of jumps to reach nums[n - 1].
 // More: https://leetcode.com/problems/jump-game-ii/
 
-import { jump } from "./00045_jump_game_2";
+import { jump } from "./00045_vv_jump_game_2";
 
 describe("Jump Game II", () => {
     it(`should return 1 since we can make only 1 jump`, () => {

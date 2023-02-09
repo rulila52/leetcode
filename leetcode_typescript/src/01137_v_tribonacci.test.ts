@@ -1,4 +1,4 @@
-import tribonacci from "./01137_tribonacci";
+import tribonacci from "./01137_v_tribonacci";
 
 // ✅ 1137. N-th Tribonacci Number
 // The Tribonacci sequence Tn is defined as follows:
