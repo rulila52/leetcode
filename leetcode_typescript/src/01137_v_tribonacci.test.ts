@@ -1,6 +1,6 @@
 import tribonacci from "./01137_v_tribonacci";
 
-// ✅ 1137. N-th Tribonacci Number (Accepted)
+// ✅ 1137. N-th Tribonacci Number (💪) (Accepted)
 // 📅 30.01.23 (Daily Challenge)
 // The Tribonacci sequence Tn is defined as follows:
 // T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.

@@ -6,6 +6,7 @@ export function shuffle1(nums: number[], n: number): number[] {
     return nums;
 }
 
+// A faster method
 export function shuffle2(nums: number[], n: number): number[] {
     let result = [];
     for (let i = 0; i < n; i++) {

@@ -48,12 +48,12 @@ describe("Naming a Company", () => {
             ideas[i] = makeString();
         }
 
-        console.time("check1");
+        console.time("Check 1st method");
         distinctNames1(ideas);
-        console.timeEnd("check1");
+        console.timeEnd("Check 1st method");
 
-        console.time("check2");
+        console.time("Check 2nd method");
         distinctNames2(ideas);
-        console.timeEnd("check2");
+        console.timeEnd("Check 2nd method");
     });
 });
