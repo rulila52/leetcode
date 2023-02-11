@@ -6,7 +6,6 @@
 // If no land or water exists in the grid, return -1.
 // The distance between two cells (x0, y0) and (x1, y1) is |x0 - x1| + |y0 - y1|.
 // More: 🔗 https://leetcode.com/problems/as-far-from-land-as-possible/
-
 import { maxDistance, maxDistanceSolution } from "./01162_hh_far_from_land";
 
 describe("As Far from Land as Possible", () => {

@@ -9,7 +9,6 @@
 // Otherwise, it is not a valid name.
 // Return the number of distinct valid names for the company.
 // More: 🔗 https://leetcode.com/problems/naming-a-company/
-
 import { distinctNames1, distinctNames2 } from "./02306_xxx_naming_a_company";
 
 function makeString(): string {
@@ -24,7 +23,6 @@ function makeString(): string {
     }
     return result;
 }
-
 describe("Naming a Company", () => {
     it(`should return 6 since we can make 6 new names - "doffee conuts", "conuts doffee",
     "tonuts dime", "tonuts doffee", "dime tonuts", "doffee tonuts"`, () => {
