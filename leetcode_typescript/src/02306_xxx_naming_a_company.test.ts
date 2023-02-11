@@ -8,7 +8,7 @@
 // (the concatenation of ideaA and ideaB, separated by a space) is a valid company name.
 // Otherwise, it is not a valid name.
 // Return the number of distinct valid names for the company.
-// More: https://leetcode.com/problems/naming-a-company/
+// More: 🔗 https://leetcode.com/problems/naming-a-company/
 
 import { distinctNames1, distinctNames2 } from "./02306_xxx_naming_a_company";
 

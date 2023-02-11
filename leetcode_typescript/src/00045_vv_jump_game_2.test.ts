@@ -5,7 +5,7 @@
 // In other words, if you are at nums[i], you can jump to any nums[i + j] where:
 // 0 <= j <= nums[i] and i + j < n
 // Return the minimum number of jumps to reach nums[n - 1].
-// More: https://leetcode.com/problems/jump-game-ii/
+// More: 🔗 https://leetcode.com/problems/jump-game-ii/
 
 import { jump } from "./00045_vv_jump_game_2";
 
