@@ -1,16 +1,12 @@
-export default function tribonacci(n: number): number | undefined {
-    if (n < 0 || n > 37) return undefined;
+export function tribonacci(n: number): number {
+    if (n == 0) return 0;
 
     let first = 0,
         second = 0,
         third = 1,
         sum = 1;
 
-    if (n == 0) return second;
-    if (n == 1) return third;
-    if (n == 2) return sum;
-
-    for (let i = 3; i <= n; i++) {
+    for (let i = 2; i < n; i++) {
         first = second;
         second = third;
         third = sum;

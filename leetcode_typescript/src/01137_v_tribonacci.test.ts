@@ -4,7 +4,7 @@
 // T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
 // Given n, return the value of Tn
 // More: 🔗 https://leetcode.com/problems/n-th-tribonacci-number/
-import tribonacci from "./01137_v_tribonacci";
+import { tribonacci } from "./01137_v_tribonacci";
 
 describe("N-th Tribonacci Number", () => {
     it(`0-7 test, should return T0 = 0, T1 = 1, T2 = 1, 
