@@ -1,4 +1,5 @@
-// ❕❕ 1162. As Far from Land as Possible (🕐👀) (Accepted - later and peeped into the solution)
+// ❕❕ 1162. As Far from Land as Possible (🕐👀, 🕐📃) (Accepted - later and peeped into the solution,
+// later implemented one of solutions)
 // 📅 10.02.23 (Daily Challenge)
 // Given an n x n grid containing only values 0 and 1, where 0 represents water and 1 represents land,
 // find a water cell such that its distance to the nearest land cell is maximized, and return the distance.
@@ -17,6 +18,14 @@ describe("As Far from Land as Possible", () => {
                 [1, 0, 1],
             ]),
         ).toEqual(2);
+
+        expect(
+            maxDistanceSolution([
+                [1, 0, 1],
+                [0, 0, 0],
+                [1, 0, 1],
+            ]),
+        ).toEqual(2);
     });
 
     it(`should return 4 since the cell (2, 2) is as far as possible`, () => {
@@ -27,11 +36,26 @@ describe("As Far from Land as Possible", () => {
                 [0, 0, 0],
             ]),
         ).toEqual(4);
+        expect(
+            maxDistanceSolution([
+                [1, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0],
+            ]),
+        ).toEqual(4);
     });
 
     it(`should return -1 since there is no the cell with land`, () => {
         expect(
             maxDistance([
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+            ]),
+        ).toEqual(-1);
+        expect(
+            maxDistanceSolution([
                 [0, 0, 0, 0],
                 [0, 0, 0, 0],
                 [0, 0, 0, 0],
@@ -50,6 +74,34 @@ describe("As Far from Land as Possible", () => {
                 [1, 1, 1, 1, 1],
             ]),
         ).toEqual(-1);
+        expect(
+            maxDistanceSolution([
+                [1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1],
+            ]),
+        ).toEqual(-1);
+    });
+
+    it(`should return 2 since cell (4, 3) is as far as possible`, () => {
+        expect(
+            maxDistance([
+                [1, 1, 0, 1],
+                [0, 1, 0, 1],
+                [1, 0, 0, 0],
+                [0, 1, 0, 0],
+            ]),
+        ).toEqual(2);
+        expect(
+            maxDistanceSolution([
+                [1, 0, 0, 1],
+                [0, 1, 0, 1],
+                [1, 0, 0, 0],
+                [0, 1, 0, 0],
+            ]),
+        ).toEqual(2);
     });
 
     it(`test with 100x100 with 1 only on border, should execute`, () => {
@@ -69,8 +121,12 @@ describe("As Far from Land as Possible", () => {
             }
         }
 
-        console.time("Check");
+        console.time("Check my solution");
         maxDistance(grid);
-        console.timeEnd("Check");
+        console.timeEnd("Check my solution");
+
+        console.time("Check similar with official solution");
+        maxDistanceSolution(grid);
+        console.timeEnd("Check similar with official solution");
     });
 });
