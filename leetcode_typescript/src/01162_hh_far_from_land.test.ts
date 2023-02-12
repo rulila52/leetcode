@@ -103,7 +103,7 @@ describe("As Far from Land as Possible", () => {
         ).toEqual(2);
     });
 
-    it(`test with 100x100 with 1 only on border, should execute`, () => {
+    it(`test with 100x100 with 1 only on border, should be executed`, () => {
         let grid: number[][] = [];
         let length = 100;
 

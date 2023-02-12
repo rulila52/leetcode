@@ -40,7 +40,7 @@ describe("Naming a Company", () => {
         expect(distinctNames2(["aaa", "baa", "caa", "bbb", "cbb", "dbb"])).toEqual(2);
     });
 
-    it(`should execute`, () => {
+    it(`should be executed`, () => {
         let ideas = Array(1000);
         for (let i = 0; i < ideas.length; i++) {
             ideas[i] = makeString();
