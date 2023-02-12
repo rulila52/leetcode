@@ -1,4 +1,4 @@
-// ❕❕ 1162. As Far from Land as Possible (🕐👀, 🕐📃) (Accepted - later and peeped into the solution,
+// ✅✅ (❗) 1162. As Far from Land as Possible (🕐👀, 🕐📃) (Accepted - later and peeped into the solution,
 // later implemented one of solutions)
 // 📅 10.02.23 (Daily Challenge)
 // Given an n x n grid containing only values 0 and 1, where 0 represents water and 1 represents land,
@@ -6,7 +6,7 @@
 // If no land or water exists in the grid, return -1.
 // The distance between two cells (x0, y0) and (x1, y1) is |x0 - x1| + |y0 - y1|.
 // More: 🔗 https://leetcode.com/problems/as-far-from-land-as-possible/
-import { maxDistance, maxDistanceSolution } from "./01162_hh_far_from_land";
+import { maxDistance, maxDistanceSolution } from "./01162_vv_far_from_land";
 
 describe("As Far from Land as Possible", () => {
     it(`should return 2 since the cell (1, 1) is as far as possible`, () => {
