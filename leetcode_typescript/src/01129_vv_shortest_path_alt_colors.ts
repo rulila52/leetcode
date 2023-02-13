@@ -3,69 +3,77 @@ export function shortestAlternatingPaths(
     redEdges: number[][],
     blueEdges: number[][],
 ): number[] {
-    interface Edge {
-        end: number;
-        color: "blue" | "red";
+    interface Node {
+        color: Record<number, number[]>;
     }
 
-    let edges: Record<number, Edge[]> = {};
+    let nodes: Record<number, Node> = {};
 
     for (let i = 0; i < redEdges.length; i++) {
-        if (!edges[redEdges[i][0]]) {
-            edges[redEdges[i][0]] = [];
+        if (!nodes[redEdges[i][0]]) {
+            nodes[redEdges[i][0]] = { color: { 0: [], 1: [] } };
         }
-        edges[redEdges[i][0]].push({ end: redEdges[i][1], color: "red" });
+        nodes[redEdges[i][0]].color[0].push(redEdges[i][1]);
     }
 
     for (let i = 0; i < blueEdges.length; i++) {
-        if (!edges[blueEdges[i][0]]) {
-            edges[blueEdges[i][0]] = [];
+        if (!nodes[blueEdges[i][0]]) {
+            nodes[blueEdges[i][0]] = { color: { 0: [], 1: [] } };
         }
-        edges[blueEdges[i][0]].push({ end: blueEdges[i][1], color: "blue" });
+        nodes[blueEdges[i][0]].color[1].push(blueEdges[i][1]);
     }
 
-    let visitedFrom: { red: boolean; blue: boolean }[] = [];
+    interface VisitedFrom {
+        color: Record<number, boolean>;
+    }
+
+    let visitedFrom: VisitedFrom[] = [];
     let distances: number[] = [];
 
     distances.push(0);
-    visitedFrom.push({ red: true, blue: true });
+    visitedFrom.push({ color: { 0: true, 1: true } });
 
     for (let i = 1; i < n; i++) {
-        visitedFrom.push({ red: false, blue: false });
+        visitedFrom.push({ color: { 0: false, 1: false } });
         distances.push(-1);
     }
 
     let queue: {
-        edge: Edge;
+        node: number;
+        color: number;
         distance: number;
     }[] = [];
 
-    if (edges[0]) {
-        for (let i = 0; i < edges[0].length; i++) {
-            queue.push({ edge: edges[0][i], distance: 1 });
-        }
-    }
+    const start = (color: number) => {
+        nodes[0]?.color[color].forEach((node) => {
+            queue.push({ node: node, color: color, distance: 1 });
+        });
+    };
+    let color = 0;
+    start(0);
+    color = 1;
+    start(1);
 
     while (queue.length) {
         const current = queue.shift()!;
-        const nextNode = current.edge.end;
 
-        if (current.distance < distances[nextNode] || distances[nextNode] == -1) {
-            distances[nextNode] = current.distance;
+        if (current.distance < distances[current.node] || distances[current.node] == -1) {
+            distances[current.node] = current.distance;
         }
 
-        if (edges[nextNode]) {
-            for (let i = 0; i < edges[nextNode].length; i++) {
-                if (
-                    edges[nextNode][i].color != current.edge.color &&
-                    !visitedFrom[edges[nextNode][i].end][edges[nextNode][i].color]
-                ) {
-                    queue.push({ edge: edges[nextNode][i], distance: current.distance + 1 });
-                    visitedFrom[edges[nextNode][i].end][edges[nextNode][i].color] = true;
+        if (nodes[current.node]) {
+            let newColor = 1 - current.color;
+            nodes[current.node]?.color[newColor].forEach((node) => {
+                if (!visitedFrom[node].color[newColor]) {
+                    queue.push({
+                        node: node,
+                        color: newColor,
+                        distance: current.distance + 1,
+                    });
+                    visitedFrom[node].color[newColor] = true;
                 }
-            }
+            });
         }
     }
-
     return distances;
 }

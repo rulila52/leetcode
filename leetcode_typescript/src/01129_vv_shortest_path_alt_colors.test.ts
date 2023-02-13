@@ -57,4 +57,8 @@ describe("Shortest Path with Alternating Colors", () => {
             ),
         ).toEqual([0, 1, 2, 3, 7]);
     });
+
+    it(`should return [0, -1, -1] since we cannot get to nodes 1,2`, () => {
+        expect(shortestAlternatingPaths(3, [[1, 0]], [[2, 1]])).toEqual([0, -1, -1]);
+    });
 });
