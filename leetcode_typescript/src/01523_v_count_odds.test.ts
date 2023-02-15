@@ -1,4 +1,4 @@
-// ✅ 1523. Count Odd Numbers in an Interval Range (💪) (Accepted - by myself)
+// ✅ 1523. Count Odd Numbers in an Interval Range (🥳) (Accepted - by myself)
 // 📅 13.02.23 (Daily Challenge)
 // Given two non-negative integers low and high.
 // Return the count of odd numbers between low and high (inclusive).

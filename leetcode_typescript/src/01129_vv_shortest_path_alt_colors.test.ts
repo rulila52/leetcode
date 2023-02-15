@@ -1,4 +1,4 @@
-// ✅✅ 1129. Shortest Path with Alternating Colors (💪) (Accepted - by myself)
+// ✅✅ 1129. Shortest Path with Alternating Colors (🥳) (Accepted - by myself)
 // 📅 11.02.23 (Daily Challenge)
 // You are given an integer n, the number of nodes in a directed graph.
 // Each edge is red or blue in this graph.

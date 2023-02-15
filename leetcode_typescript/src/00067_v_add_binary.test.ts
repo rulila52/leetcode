@@ -1,4 +1,4 @@
-// ✅ 67. Add Binary (💪) (Accepted - by myself)
+// ✅ 67. Add Binary (🥳) (Accepted - by myself)
 // 📅 14.02.23 (Daily Challenge)
 // Given two binary strings a and b, return their sum as a binary string.
 // More: 🔗 https://leetcode.com/problems/add-binary/

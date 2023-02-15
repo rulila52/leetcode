@@ -1,4 +1,4 @@
-// ✅✅ 904. Fruit Into Baskets (💪) (Accepted - by myself)
+// ✅✅ 904. Fruit Into Baskets (🥳) (Accepted - by myself)
 // 📅 07.02.23 (Daily Challenge)
 // Given the integer array fruits, return the maximum number of fruits you can pick.
 // fruits[i] is the type of fruit the ith tree produces.

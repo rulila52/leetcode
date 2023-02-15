@@ -1,4 +1,4 @@
-// ✅✅ 2477. Minimum Fuel Cost to Report to the Capital (💪) (Accepted - by myself)
+// ✅✅ 2477. Minimum Fuel Cost to Report to the Capital (🥳) (Accepted - by myself)
 // 📅 12.02.23 (Daily Challenge)
 // There is a tree (i.e., a connected, undirected graph with no cycles) structure.
 // The capital city is city 0. You are given a 2D integer array roads where roads[i] = [ai, bi]
