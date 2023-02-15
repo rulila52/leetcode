@@ -16,7 +16,7 @@ describe("Count Odd Numbers in an Interval Range", () => {
         expect(countOdds(6, 6)).toEqual(0);
     });
 
-    it(`Test with big high number, should be executed and return 500000000`, () => {
+    it(`test with big high number, should be executed and return 500000000`, () => {
         expect(countOdds(0, 1000000000)).toEqual(500000000);
     });
 });

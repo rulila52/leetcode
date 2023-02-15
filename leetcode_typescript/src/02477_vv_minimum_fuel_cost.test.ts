@@ -51,7 +51,7 @@ describe("Minimum Fuel Cost to Report to the Capital", () => {
         ).toEqual(5);
     });
 
-    it(`Test on big graph, should be executed`, () => {
+    it(`test on big graph, should be executed`, () => {
         const roads: number[][] = [];
         for (let i = 1; i <= 100000; i += 2) {
             let end = Math.floor(i / 2);

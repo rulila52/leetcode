@@ -17,7 +17,7 @@ describe("N-th Tribonacci Number", () => {
         expect(tribonacci(5)).toEqual(7);
     });
 
-    it(`Test on big data, must be executed within the normal time and return T37 = 2082876103`, async () => {
+    it(`test on big data, must be executed within the normal time and return T37 = 2082876103`, async () => {
         expect(tribonacci(37)).toEqual(2082876103);
     });
 });

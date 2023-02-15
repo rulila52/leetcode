@@ -18,7 +18,7 @@ describe("Add Binary", () => {
         expect(addBinary("1011101", "100")).toEqual("1100001");
     });
 
-    it(`Test with big string numbers, should be executed`, () => {
+    it(`test with big string numbers, should be executed`, () => {
         let a = "1",
             b = "1";
         for (let i = 1; i < 10000; i++) {
