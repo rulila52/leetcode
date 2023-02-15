@@ -4,13 +4,18 @@ export function addBinary(a: string, b: string): string {
     }
 
     let shift = a.length - b.length,
-        rest = 0,
-        result = "";
+        carry = 0,
+        result = [];
 
-    for (let i = a.length - 1; i >= 0; i--) {
-        result += `${+a[i] ^ (+b[i - shift] || 0) ^ rest}`;
-        rest = (+a[i] | ((+b[i - shift] || 0) & rest)) & ((+a[i] & (+b[i - shift] || 0)) | rest);
+    for (let i = a.length - 1; i >= shift; i--) {
+        result.unshift(+a[i] ^ (+b[i - shift] || 0) ^ carry);
+        carry = (+a[i] | ((+b[i - shift] || 0) & carry)) & ((+a[i] & (+b[i - shift] || 0)) | carry);
     }
 
-    return (result + (rest || "")).split("").reverse().join("");
+    for (let i = shift - 1; i >= 0; i--) {
+        result.unshift(+a[i] ^ carry);
+        carry = +a[i] & carry;
+    }
+
+    return (result.unshift(carry || ""), result).join("");
 }
