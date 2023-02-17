@@ -4,30 +4,10 @@
 // A binary tree's maximum depth is the number of nodes along the longest path
 // from the root node down to the farthest leaf node.
 // More: 🔗 https://leetcode.com/problems/maximum-depth-of-binary-tree/
-import { maxDepth, TreeNode } from "./00104_v_max_depth";
+import { maxDepth } from "./00104_v_max_depth";
+import { createTree } from "./utils/tree_node";
 
 describe("Maximum Depth of Binary Tree", () => {
-    function createTree(arr: (number | null)[]) {
-        if (!arr.length) return null;
-
-        const queue: TreeNode[] = [];
-        const tree: TreeNode = new TreeNode(arr.shift() || undefined);
-        queue.push(tree);
-
-        while (queue.length) {
-            const current = queue.shift()!;
-            if (arr.length) {
-                current.left = new TreeNode(arr.shift() || undefined);
-                queue.push(current.left);
-            }
-            if (arr.length) {
-                current.right = new TreeNode(arr.shift() || undefined);
-                queue.push(current.right);
-            }
-        }
-        return tree;
-    }
-
     it(`should return the depth of tree equal to 0`, () => {
         expect(maxDepth(createTree([]))).toEqual(0);
     });
@@ -55,7 +35,7 @@ describe("Maximum Depth of Binary Tree", () => {
         expect(maxDepth(tree)).toEqual(4);
     });
 
-    it(`test with big tree, should be executed and return `, () => {
+    it(`test with big tree, should be executed and return the right depth of tree`, () => {
         let arr = [],
             length = 10000,
             lastPow = 0,
@@ -70,7 +50,6 @@ describe("Maximum Depth of Binary Tree", () => {
             }
         }
 
-        const tree = createTree(arr);
-        expect(maxDepth(tree)).toEqual(lastPow);
+        expect(maxDepth(createTree(arr))).toEqual(lastPow);
     });
 });
