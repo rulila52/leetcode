@@ -35,6 +35,16 @@ describe("Maximum Depth of Binary Tree", () => {
         expect(maxDepth(tree)).toEqual(4);
     });
 
+    it(`should return the depth of tree equal to 3 
+    (null node at the end of test must not be a new level):
+    10
+    6      9
+    -  -   11   7`, () => {
+        const arr = [10, 6, 9, null, null, 11, 7, null];
+        const tree = createTree(arr);
+        expect(maxDepth(tree)).toEqual(3);
+    });
+
     it(`test with big tree, should be executed and return the right depth of tree`, () => {
         let arr = [],
             length = 10000,
