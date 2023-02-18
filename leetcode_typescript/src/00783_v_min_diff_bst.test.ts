@@ -21,18 +21,10 @@ describe("Minimum Distance Between BST Nodes", () => {
     });
 
     it(`test with big tree and nodes values, should be executed`, () => {
-        let arr = [],
-            length = 100,
-            lastPow = 0,
-            last2inPow = 0;
+        let arr = [];
 
-        for (let i = 1; i < length; i++) {
+        for (let i = 1; i < 100; i++) {
             arr.push(Math.floor(Math.random() * 100000));
-            const check = Math.pow(2, lastPow);
-            if (check === i - last2inPow || i == length - 1) {
-                last2inPow = check;
-                lastPow++;
-            }
         }
 
         maxDepth(createTree(arr));
