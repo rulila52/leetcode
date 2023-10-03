@@ -3,7 +3,7 @@
 // Given the root of a binary tree, invert the tree, and return its root.
 // More: 🔗 https://leetcode.com/problems/invert-binary-tree/
 import { invertTree } from "./000226_v_invert_tree";
-import { createTree, TreeNode } from "./utils/tree_node";
+import { createTree } from "./utils/tree_node";
 
 describe("Invert Binary Tree", () => {
     it(`should invert tree`, () => {
