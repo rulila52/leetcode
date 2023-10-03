@@ -4,7 +4,7 @@
 // Given num, the array-form of an integer, and an integer k,
 // return the array-form of the integer num + k.
 // More: 🔗 https://leetcode.com/problems/add-to-array-form-of-integer/
-import { addToArrayForm } from "./00989_v_add_to_array_form";
+import { addToArrayForm } from "./000989_v_add_to_array_form";
 
 describe("Add to Array-Form of Integer", () => {
     it(`should return the array-form of the integer num + k`, () => {

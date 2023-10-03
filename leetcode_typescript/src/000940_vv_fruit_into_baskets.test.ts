@@ -7,7 +7,7 @@
 // - Starting from any tree, you must pick exactly one fruit from every tree while moving to the right.
 // - Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 // More: 🔗 https://leetcode.com/problems/fruit-into-baskets/
-import { totalFruit } from "./00940_vv_fruit_into_baskets";
+import { totalFruit } from "./000940_vv_fruit_into_baskets";
 
 describe("Fruit Into Baskets", () => {
     it(`one tree test, should return 1 since there is only one tree`, () => {

@@ -3,7 +3,7 @@
 // Given the root of a binary tree, return the zigzag level order traversal of its nodes' values.
 // (i.e., from left to right, then right to left for the next level and alternate between).
 // More: 🔗 https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
-import { zigzagLevelOrder } from "./00103_vv_zigzag_level_order";
+import { zigzagLevelOrder } from "./000103_vv_zigzag_level_order";
 import { createTree } from "./utils/tree_node";
 
 describe("Binary Tree Zigzag Level Order Traversal", () => {
