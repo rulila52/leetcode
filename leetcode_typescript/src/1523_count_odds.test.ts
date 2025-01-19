@@ -3,7 +3,7 @@
 // Given two non-negative integers low and high.
 // Return the count of odd numbers between low and high (inclusive).
 // More: 🔗 https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
-import { countOdds } from "./001523_v_count_odds";
+import { countOdds } from "./1523_count_odds";
 
 describe("Count Odd Numbers in an Interval Range", () => {
     it(`should return the count of odd numbers between two numbers (inclusive)`, () => {

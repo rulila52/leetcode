@@ -3,8 +3,8 @@
 // Given the root of a Binary Search Tree (BST), return the minimum difference
 // between the values of any two different nodes in the tree.
 // More: 🔗 https://leetcode.com/problems/minimum-distance-between-bst-nodes/
-import { maxDepth } from "./000104_v_max_depth";
-import { minDiffInBST } from "./000783_v_min_diff_bst";
+import { maxDepth } from "./104_max_depth";
+import { minDiffInBST } from "./783_min_diff_bst";
 import { createTree } from "./utils/tree_node";
 
 describe("Minimum Distance Between BST Nodes", () => {

@@ -5,7 +5,7 @@
 // index where it would be if it were inserted in order.
 // You must write an algorithm with O(log n) runtime complexity.
 // More: 🔗 https://leetcode.com/problems/search-insert-position/
-import { searchInsert } from "./000035_v_search_insert";
+import { searchInsert } from "./35_search_insert";
 
 describe("Search Insert Position", () => {
     it(`should return the index where the target is located or should be inserted`, () => {

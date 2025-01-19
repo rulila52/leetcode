@@ -9,7 +9,7 @@
 // The cost of traveling between two cities is one liter of fuel.
 // Return the minimum number of liters of fuel to reach the capital city.
 // More: 🔗 https://leetcode.com/problems/minimum-fuel-cost-to-report-to-the-capital/
-import { minimumFuelCost } from "./002477_vv_minimum_fuel_cost";
+import { minimumFuelCost } from "./2477_minimum_fuel_cost";
 
 describe("Minimum Fuel Cost to Report to the Capital", () => {
     it(`should return 0 since we haven't roads from 0 capital`, () => {

@@ -9,7 +9,7 @@
 // from node 0 to node x such that the edge colors alternate along the path,
 // or -1 if such a path does not exist.
 // More: 🔗 https://leetcode.com/problems/shortest-path-with-alternating-colors/
-import { shortestAlternatingPaths } from "./001129_vv_shortest_path_alt_colors";
+import { shortestAlternatingPaths } from "./1129_shortest_path_alt_colors";
 
 describe("Shortest Path with Alternating Colors", () => {
     it(`should return [0, 1, -1] since we can get to node 1 in 1 step and cannot get to the node 2`, () => {

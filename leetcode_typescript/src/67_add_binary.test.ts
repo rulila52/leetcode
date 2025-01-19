@@ -2,7 +2,7 @@
 // 📅 14.02.23 (Daily Challenge)
 // Given two binary strings a and b, return their sum as a binary string.
 // More: 🔗 https://leetcode.com/problems/add-binary/
-import { addBinary } from "./000067_v_add_binary";
+import { addBinary } from "./67_add_binary";
 
 describe("Add Binary", () => {
     it(`should return sum as binary string`, () => {
