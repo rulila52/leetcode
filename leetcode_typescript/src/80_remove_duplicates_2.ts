@@ -1,15 +1,8 @@
 export function removeDuplicates(nums: number[]): number {
-    let k = 1;
-    let counter = 1;
+    let k = 2;
 
-    for (let i = 1; i < nums.length; i++) {
-        if (nums[i - 1] !== nums[i]) {
-            counter = 1;
-        } else {
-            counter++;
-        }
-
-        if (counter < 3) {
+    for (let i = 2; i < nums.length; i++) {
+        if (nums[i] !== nums[k - 2]) {
             nums[k] = nums[i];
             k++;
         }
