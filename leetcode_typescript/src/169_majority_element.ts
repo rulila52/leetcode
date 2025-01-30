@@ -1,4 +1,4 @@
-// O(n) time, O(n) space
+// Time - O(n), Space - O(n)
 export function majorityElement(nums: number[]): number {
     let res = 0,
         majority = 0,
@@ -17,7 +17,7 @@ export function majorityElement(nums: number[]): number {
     return res;
 }
 
-// O(n) time, O(1) space
+// Time - O(n), Space - O(1)
 export function majorityElement2(nums: number[]): number {
     let res = 0,
         majority = 0;
