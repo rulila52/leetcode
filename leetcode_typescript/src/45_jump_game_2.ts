@@ -8,7 +8,7 @@ export function jump(nums: number[]): number {
         for (let i = min; i < max + 1; i++) {
             curMax = Math.max(curMax, i + nums[i]);
         }
-        min = max;
+        min = max + 1;
         max = curMax;
         jumps++;
     }
