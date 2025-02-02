@@ -9,7 +9,7 @@
 import { merge } from "./88_merge_sorted_array";
 
 describe("Merge Sorted Array", () => {
-    it(`should return the right answer`, () => {
+    it("should return the right answer", () => {
         const nums1 = [1, 2, 3, 0, 0, 0];
         merge(nums1, 3, [2, 5, 6], 3);
         expect(JSON.stringify(nums1)).toEqual(JSON.stringify([1, 2, 2, 3, 5, 6]));

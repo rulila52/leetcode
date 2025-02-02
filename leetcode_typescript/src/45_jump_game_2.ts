@@ -1,40 +1,17 @@
 export function jump(nums: number[]): number {
-    return jumpWithCache(nums, 0, {}).steps;
-}
+    let jumps = 0;
+    let min = 0,
+        max = 0;
 
-interface StepsAndCache {
-    steps: number;
-    cache: Record<number, number>;
-}
-
-function jumpWithCache(
-    nums: number[],
-    startIndex: number,
-    cache: Record<number, number>,
-): StepsAndCache {
-    if (startIndex + 1 == nums.length) {
-        cache[startIndex] = 0;
-        return {
-            steps: 0,
-            cache: cache,
-        };
-    }
-    let minSteps = -2;
-    for (let i = 1; i <= nums[startIndex]; i++) {
-        if (i < nums.length) {
-            const newIndex = startIndex + i;
-            let stepsAndCache: StepsAndCache;
-            if (cache[newIndex] != null) {
-                stepsAndCache = { steps: cache[newIndex], cache: cache };
-            } else {
-                stepsAndCache = jumpWithCache(nums, newIndex, cache);
-                cache = stepsAndCache.cache;
-            }
-            if (stepsAndCache.steps >= 0 && (minSteps < 0 || stepsAndCache.steps < minSteps)) {
-                minSteps = stepsAndCache.steps;
-            }
+    while (max < nums.length - 1) {
+        let curMax = 0;
+        for (let i = min; i < max + 1; i++) {
+            curMax = Math.max(curMax, i + nums[i]);
         }
+        min = max;
+        max = curMax;
+        jumps++;
     }
-    cache[startIndex] = ++minSteps;
-    return { steps: minSteps, cache: cache };
+
+    return jumps;
 }

@@ -1,10 +1,5 @@
-// ✅✅ 45. Jump Game II (🥳) (Accepted - by myself)
-// 📅 08.02.23 (Daily Challenge)
-// You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].
-// Each element nums[i] represents the maximum length of a forward jump from index i.
-// In other words, if you are at nums[i], you can jump to any nums[i + j] where:
-// 0 <= j <= nums[i] and i + j < n
-// Return the minimum number of jumps to reach nums[n - 1].
+// ✅✅ 45. Jump Game II
+// 📅 08.02.23 (Daily Challenge), 02.02.2025
 // More: 🔗 https://leetcode.com/problems/jump-game-ii/
 
 import { jump } from "./45_jump_game_2";

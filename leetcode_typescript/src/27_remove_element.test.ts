@@ -15,7 +15,7 @@
 import { removeElement } from "./27_remove_element";
 
 describe("Remove Element", () => {
-    it(`should return the right answer`, () => {
+    it("should return the right answer", () => {
         const arr = [0, 1, 2, 3, 4];
         const k = removeElement(arr, 2);
         expect(JSON.stringify(arr.slice(0, k))).toEqual(JSON.stringify([0, 1, 3, 4]));

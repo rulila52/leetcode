@@ -7,7 +7,7 @@
 import { argumentsLength } from "./2703_length_arguments";
 
 describe("Return Length of Arguments Passed", () => {
-    it(`should return the right answer`, () => {
+    it("should return the right answer", () => {
         expect(argumentsLength(1, 2, 3)).toEqual(3);
     });
 });

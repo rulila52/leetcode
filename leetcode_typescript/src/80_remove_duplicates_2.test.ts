@@ -9,7 +9,7 @@
 import { removeDuplicates } from "./80_remove_duplicates_2";
 
 describe("Remove Duplicates from Sorted Array", () => {
-    it(`should return the right answer`, () => {
+    it("should return the right answer", () => {
         const arr = [1, 1, 1, 2, 2, 3];
         const k = removeDuplicates(arr);
         expect(JSON.stringify(arr.slice(0, k))).toEqual(JSON.stringify([1, 1, 2, 2, 3]));

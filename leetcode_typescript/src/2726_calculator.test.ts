@@ -11,7 +11,7 @@
 import { Calculator } from "./2726_calculator";
 
 describe("Calculator with Method Chaining", () => {
-    it(`should return the right answer`, () => {
+    it("should return the right answer", () => {
         expect(new Calculator(10).add(5).subtract(7).getResult()).toEqual(8);
     });
 });
