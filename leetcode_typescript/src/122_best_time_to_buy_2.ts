@@ -7,7 +7,7 @@ export function maxProfit(prices: number[]): number {
             buyPrice = prices[i];
             continue;
         }
-        if (i === prices.length - 1 || (prices[i + 1] < prices[i] && prices[i] - buyPrice)) {
+        if (prices[i + 1] < prices[i] || i === prices.length - 1) {
             profit += prices[i] - buyPrice;
             buyPrice = prices[i];
         }
