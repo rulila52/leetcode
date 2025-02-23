@@ -26,10 +26,10 @@ export function recoverFromPreorder(traversal: string): TreeNode | null {
         }
 
         if (stack.length !== 0) {
-            if (!stack.at(-1).left) {
-                stack.at(-1).left = node;
+            if (!stack.at(-1)?.left) {
+                stack.at(-1)!.left = node;
             } else {
-                stack.at(-1).right = node;
+                stack.at(-1)!.right = node;
             }
         }
 
