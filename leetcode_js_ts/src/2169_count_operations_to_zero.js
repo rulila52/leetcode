@@ -1,4 +1,5 @@
 /**
+ * https://leetcode.com/problems/count-operations-to-obtain-zero/description/
  * @param {number} num1
  * @param {number} num2
  * @return {number}

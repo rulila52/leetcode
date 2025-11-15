@@ -1,6 +1,4 @@
-Try to solve by myself later:
-
-https://leetcode.com/problems/maximize-the-minimum-powered-city/description/
+Try to solve later:
 
 https://leetcode.com/problems/minimum-one-bit-operations-to-make-integers-zero/description/
 
